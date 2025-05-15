@@ -26,7 +26,7 @@ public class Moeda : MonoBehaviour
             sr.enabled = false;
             circle.enabled = false;
             collected.SetActive(true);
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 0.5f);
         }
     }
 }

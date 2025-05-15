@@ -30,6 +30,7 @@ public class NewBehaviourScript : MonoBehaviour
         
         Move();
         jump();
+        atacar();
         IsFalling();
     }
 
@@ -69,6 +70,13 @@ public class NewBehaviourScript : MonoBehaviour
         }
     }
 
+
+    private void atacar(){
+        if(Input.GetKeyDown(KeyCode.Z) ){
+            anim.SetTrigger("atacar");
+        
+        }
+    }
     void IsFalling(){
         isFalling = rig.linearVelocity.y < 0 && IsJumping; 
         anim.SetBool("fall", isFalling);
@@ -87,4 +95,8 @@ public class NewBehaviourScript : MonoBehaviour
         IsJumping = true;
         anim.SetBool("fall",true); }
     }
+
+   
+        
+    
 }
