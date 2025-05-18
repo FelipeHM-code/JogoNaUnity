@@ -30,7 +30,7 @@ public class Moeda : MonoBehaviour
             collected.SetActive(true);
 
             GameControler.instance.TotalScore += score;
-
+            GameControler.instance.updateScoreText();
             Destroy(gameObject, 0.5f);
         }
     }
