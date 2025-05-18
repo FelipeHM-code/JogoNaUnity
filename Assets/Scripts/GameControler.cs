@@ -10,7 +10,16 @@ public class GameControler : MonoBehaviour
     void Start()
     {
         instance = this;
-        updateScoreText(); 
+       instance = this;
+
+     if (scoreText != null)
+    {
+        updateScoreText();
+    }
+     else
+    {
+        Debug.LogError("scoreText não foi atribuído no Inspector!");
+    }
     }
 
     public void updateScoreText()
